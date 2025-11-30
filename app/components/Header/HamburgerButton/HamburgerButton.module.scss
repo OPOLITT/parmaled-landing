@@ -1,0 +1,35 @@
+.hamburgerButton {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 3px;
+  background-color: #ef8e01;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.open {
+  .hamburgerLine {
+    &:nth-child(1) {
+      transform: translate(0px, 8px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translate(0px, -8px) rotate(-45deg);
+    }
+  }
+}
+

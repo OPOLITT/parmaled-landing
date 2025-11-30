@@ -3,11 +3,11 @@ import cls from "./Typography.module.scss";
 import { getTagBySize } from "./utils";
 
 export type TypographyFont = "primary" | "secondary";
-export type TypographySize = 64 | 48 | 28 | 22 | 20 | 18 | 16 | 14 | 12 | 10;
+export type TypographySize = 64 | 48 | 28 | 24 | 22 | 20 | 18 | 16 | 14 | 12 | 10;
 export type TypographyWeight = "extraBold" | "medium" | "regular" | "light";
 
 export interface TypographyProps extends React.PropsWithChildren {
-  /** Шрифт: primary (Unbounded) или secondary (Century Gothic) */
+  /** Шрифт: primary (Unbounded) или secondary (Gothic) */
   font?: TypographyFont;
   size?: TypographySize;
   weight?: TypographyWeight;

@@ -7,6 +7,7 @@ const sizeToTagMap: Record<TypographySize, React.ElementType> = {
   64: "h1",
   48: "h1",
   28: "h2",
+  24: "h2",
   22: "h3",
   20: "p",
   18: "p",

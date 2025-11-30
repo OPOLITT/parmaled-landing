@@ -1,13 +1,13 @@
 .container {
   position: relative;
-  background-image: url("/WelcomeBlock/welcomeBG.png");
+  background-image: url("/WelcomeBlock/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.light {
-transform: translateX(160%);
+.content {
+  padding-top: 320px;
 }
 
 .title {
