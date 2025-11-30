@@ -5,9 +5,9 @@ export interface NavigationItem {
 }
 
 export const navigationItems: NavigationItem[] = [
-  { id: "catalog", label: "Каталог", sectionId: "catalog" },
-  { id: "about", label: "О компании", sectionId: "about" },
-  { id: "contacts", label: "Контакты", sectionId: "contacts" },
-  { id: "download", label: "Скачать каталог", sectionId: "catalog" },
+  { id: "catalog", label: "каталог", sectionId: "catalog" },
+  { id: "about", label: "о компании", sectionId: "about" },
+  { id: "contacts", label: "контакты", sectionId: "contacts" },
+  { id: "download", label: "скачать каталог", sectionId: "catalog" },
 ];
 

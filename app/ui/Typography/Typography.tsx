@@ -30,10 +30,8 @@ export const Typography: React.FC<TypographyProps> = ({
     <Tag
       data-font={font}
       data-weight={weight}
+      data-size={size}
       className={clsx(cls.typography, className)}
-      style={{
-        fontSize: `${size}px`,
-      }}
     >
       {children}
     </Tag>

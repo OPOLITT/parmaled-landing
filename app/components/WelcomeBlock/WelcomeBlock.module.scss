@@ -1,27 +1,77 @@
-.container {
+.wrapper {
   position: relative;
   background-image: url("/WelcomeBlock/bg.png");
   background-size: cover;
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
+
+  @media (max-width: 1100px) {
+    background-position: right -50px;
+  }
+
+  @media (max-width: 850px) {
+    background-image: url("/WelcomeBlock/bg.png");
+    background-position: right;
+  }
+
+  @media (max-width: 480px) {
+    background-image: url("/WelcomeBlock/bgmobile.png");
+    background-position: center -50px;
+    background-size: 100% auto;
+  }
+
+  @media (max-width: 360px) {
+    background-position: center -15px;
+  }
+}
+
+.logotype {
+  @media (max-width: 480px) {
+    display: none;
+  }
+}
+
+.container[class] {
+  position: 0;
+  margin: 0 auto;
+  padding-bottom: 150px;
+
+  @media (max-width: 480px) {
+    padding: 0 16px 150px 16px;
+  }
 }
 
 .content {
   padding-top: 320px;
 }
 
-.title {
+.title[class] {
   margin: 5px 0;
   text-transform: uppercase;
   white-space: pre-line;
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+  @media (max-width: 480px) {
+    font-size: 28px !important;
+  }
 }
 
-.description {
-  font-weight: 200 !important;
+.description[class] {
+  font-weight: 200;
   white-space: pre-line;
   word-wrap: break-word;
   overflow-wrap: break-word;
   margin-bottom: 24px;
+
+  @media (max-width: 480px) {
+    font-size: 14px !important;
+  }
+}
+
+.button {
+  @media (max-width: 480px) {
+    width: 100% !important;
+    font-size: 14px !important;
+  }
 }

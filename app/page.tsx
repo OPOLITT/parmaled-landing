@@ -4,7 +4,6 @@ import { AboutCompany } from "./components/AboutCompany/AboutCompany";
 import { Contacts } from "./components/Contacts/Contacts";
 import { Category } from "./components/Category/Category";
 import { getFirstCategory } from "./lib/catalog";
-import { Backdrop } from "./ui/Backdrop/Backdrop";
 
 export default function Home() {
   const categoryData = getFirstCategory();

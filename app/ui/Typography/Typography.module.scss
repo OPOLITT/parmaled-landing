@@ -1,7 +1,5 @@
 .typography {
   color: #0d2344;
-  margin: 0;
-  padding: 0;
 }
 
 .typography[data-font="primary"] {
@@ -26,4 +24,48 @@
 
 .typography[data-weight="light"] {
   font-weight: 300;
+}
+
+.typography[data-size="64"] {
+  font-size: 64px;
+}
+
+.typography[data-size="48"] {
+  font-size: 48px;
+}
+
+.typography[data-size="28"] {
+  font-size: 28px;
+}
+
+.typography[data-size="24"] {
+  font-size: 24px;
+}
+
+.typography[data-size="22"] {
+  font-size: 22px;
+}
+
+.typography[data-size="20"] {
+  font-size: 20px;
+}
+
+.typography[data-size="18"] {
+  font-size: 18px;
+}
+
+.typography[data-size="16"] {
+  font-size: 16px;
+}
+
+.typography[data-size="14"] {
+  font-size: 14px;
+}
+
+.typography[data-size="12"] {
+  font-size: 12px;
+}
+
+.typography[data-size="10"] {
+  font-size: 10px;
 }

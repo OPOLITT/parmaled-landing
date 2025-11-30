@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import cls from "./WelcomeBlock.module.scss";
 import { LogotypeHorizontal } from "../Logotype/LogotypeHorizontal";
 import { Typography } from "../../ui/Typography/Typography";
@@ -12,9 +10,10 @@ const SUBTITLE_TEXT =
 
 export const WelcomeBlock = () => {
   return (
-    <Container className={cls.container}>
+    <div className={cls.wrapper}>
+      <Container className={cls.container}>
       <div className={cls.content}>
-        <LogotypeHorizontal width={206} height={40} />
+        <LogotypeHorizontal className={cls.logotype} width={206} height={40} />
 
         <Typography className={cls.title} size={48} weight="extraBold">
           {TITLE_TEXT}
@@ -29,8 +28,9 @@ export const WelcomeBlock = () => {
           {SUBTITLE_TEXT}
         </Typography>
 
-        <Button variant="primary">Cкачать онлайн каталог</Button>
+        <Button className={cls.button} variant="primary">Cкачать онлайн каталог</Button>
       </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
