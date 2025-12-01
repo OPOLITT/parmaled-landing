@@ -5,7 +5,7 @@ import { Container } from "../../ui/Container/Container";
 import { Typography } from "../../ui/Typography/Typography";
 import cls from "./Catalog.module.scss";
 import { CatalogBlock } from "./CatalogBlock/CatalogBlock";
-import { catalogMap } from "../../data/catalogMap";
+import { catalog } from "../../data/catalog";
 import { scrollToCategory } from "../../lib/scroll";
 
 export const Catalog: React.FC = () => {
@@ -29,7 +29,7 @@ export const Catalog: React.FC = () => {
       {isMobile ? (
         <div className={cls.blocks}>
           <div className={cls.row}>
-            {catalogMap.map((category, index) => {
+            {catalog.map((category, index) => {
               if (index % 2 === 0) {
                 return (
                   <CatalogBlock
@@ -45,7 +45,7 @@ export const Catalog: React.FC = () => {
             })}
           </div>
           <div className={cls.row}>
-            {catalogMap.map((category, index) => {
+            {catalog.map((category, index) => {
               if (index % 2 === 1) {
                 return (
                   <CatalogBlock
@@ -63,7 +63,7 @@ export const Catalog: React.FC = () => {
         </div>
       ) : (
         <div className={cls.blocks}>
-          {catalogMap.map((category) => (
+          {catalog.map((category) => (
             <CatalogBlock
               key={category.id}
               id={category.id}

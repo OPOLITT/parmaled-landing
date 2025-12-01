@@ -2,13 +2,10 @@ import { Header } from "./components/Header/Header";
 import { WelcomeBlock } from "./components/WelcomeBlock/WelcomeBlock";
 import { AboutCompany } from "./components/AboutCompany/AboutCompany";
 import { Contacts } from "./components/Contacts/Contacts";
-import { Category } from "./components/Category/Category";
-import { getFirstCategory } from "./lib/catalog";
+import { CategoriesList } from "./components/CategoriesList/CategoriesList";
 import { Catalog } from "./components/Catalog/Catalog";
 
 export default function Home() {
-  const categoryData = getFirstCategory();
-
   return (
     <div>
       <main>
@@ -19,9 +16,7 @@ export default function Home() {
         <section id="catalog">
           <Catalog />
         </section>
-        <Category
-          data={categoryData}
-        />
+        <CategoriesList />
         <section id="about">
           <AboutCompany />
         </section>

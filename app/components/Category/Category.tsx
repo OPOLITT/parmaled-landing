@@ -7,8 +7,7 @@ import { Typography } from "../../ui/Typography/Typography";
 import { Button } from "../../ui/Button/Button";
 import cls from "./Category.module.scss";
 import { CategoryBlock } from "./CategoryBlock/CategoryBlock";
-import { CategoryData } from "../../types/catalog";
-import { scrollToElement } from "../../lib/scroll";
+import { CategoryData } from "../../types/category";
 
 export interface CategoryProps {
   data: CategoryData;

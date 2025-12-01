@@ -1,5 +1,5 @@
-import { CategoryData, ProductBlock } from "../types/catalog";
-import { catalogData } from "../data/catalog";
+import { CategoryData, ProductBlock } from "../types/category";
+import { catalogData } from "../data/category";
 
 /**
  * Получить все категории каталога
