@@ -1,6 +1,8 @@
 "use client";
 
+import { memo, useCallback } from "react";
 import { Typography } from "../../../ui/Typography/Typography";
+import { useLazyImage } from "../../../lib/hooks/useLazyImage";
 import cls from "./CatalogBlock.module.scss";
 import { Button } from "../../../ui/Button/Button";
 
@@ -11,23 +13,26 @@ export interface CatalogBlockProps {
   onViewClick?: (categoryId: string) => void; // Callback для скролла к категории
 }
 
-export const CatalogBlock: React.FC<CatalogBlockProps> = ({ 
+export const CatalogBlock: React.FC<CatalogBlockProps> = memo(({ 
   id, 
   title, 
   image,
   onViewClick 
 }) => {
-  const handleViewClick = () => {
-    if (onViewClick) {
-      onViewClick(id);
-    }
-  };
+  const { imageSrc, imgRef } = useLazyImage(image);
+  const handleViewClick = useCallback(() => {
+    onViewClick?.(id);
+  }, [id, onViewClick]);
 
   return (
     <div className={cls.wrapper}>
       <div
+        ref={imgRef}
         className={cls.container}
-        style={{ backgroundImage: `url(${image})` }}
+        style={{ 
+          backgroundImage: imageSrc ? `url(${imageSrc})` : undefined,
+          backgroundColor: imageSrc ? undefined : "#f0f0f0"
+        }}
       >
         <Typography className={cls.title} size={12} weight="regular">
           {title}
@@ -42,4 +47,6 @@ export const CatalogBlock: React.FC<CatalogBlockProps> = ({
       </Button>
     </div>
   );
-};
+});
+
+CatalogBlock.displayName = "CatalogBlock";
